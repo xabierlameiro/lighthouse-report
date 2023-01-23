@@ -224,7 +224,7 @@ const langs = ['es', 'gl', 'en'];
                   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
                   <meta name="viewport" content="width=device-width" />
                   <title>${translations[lang].title}</title>
-                  <link rel="stylesheet" href="../../connectors.css" />
+                  <link rel="stylesheet" href="/connectors.css" />
                   <meta name="robots" content="noindex" />
                   <link rel="icon" href="/favicon.svg" title="The favicon" />
                </head>
@@ -235,8 +235,8 @@ const langs = ['es', 'gl', 'en'];
                   <ul class="links">${links.join('')}</ul>
                   <div class="chart" id="OrganiseChart-big-commpany"></div>
             
-                  <script src="/raphael.js"></script>
-                  <script src="../../Treant.js"></script>
+                  <script src="public/raphael.js"></script>
+                  <script src="/Treant.js"></script>
                   <script src="../../connectors.js"></script>
                
 
