@@ -224,7 +224,7 @@ const langs = ['es', 'gl', 'en'];
                   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
                   <meta name="viewport" content="width=device-width" />
                   <title>${translations[lang].title}</title>
-                  <link rel="stylesheet" href="../../assets/connectors.css" />
+                  <link rel="stylesheet" href="assets/connectors.css" />
                   <meta name="robots" content="noindex" />
                   <link rel="icon" href="/favicon.svg" title="The favicon" />
                </head>
@@ -235,9 +235,9 @@ const langs = ['es', 'gl', 'en'];
                   <ul class="links">${links.join('')}</ul>
                   <div class="chart" id="OrganiseChart-big-commpany"></div>
             
-                  <script src="../../assets/raphael.js"></script>
-                  <script src="../../assets/Treant.js"></script>
-                  <script src="/${lang}/connectors.js"></script>
+                  <script src="assets/raphael.js"></script>
+                  <script src="assets/Treant.js"></script>
+                  <script src="output/${lang}/connectors.js"></script>
             
                   <script>
                      new Treant(config);
