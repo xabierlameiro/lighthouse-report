@@ -237,7 +237,7 @@ const langs = ['es', 'gl', 'en'];
             
                   <script src="output/assets/raphael.js"></script>
                   <script src="output/assets/Treant.js"></script>
-                  <script src="connectors.js"></script>
+                  <script src="./output/${lang}/connectors.js"></script>
             
                   <script>
                      new Treant(config);
