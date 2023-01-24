@@ -148,6 +148,7 @@ body {
    font-size: 14px;
 }
 
+body.container,
 #OrganiseChart-big-commpany {
    width: 200%;
 }
