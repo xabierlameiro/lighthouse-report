@@ -71,7 +71,11 @@ const langs = ['es', 'gl', 'en'];
 
    // clean and create output folder
    if (fs.existsSync('output')) {
-      fs.rmdirSync('output', { recursive: true });
+      fs.readdirSync('output').forEach((file) => {
+         if (file !== 'asserts') {
+            fs.rmdirSync(`output/${file}`, { recursive: true });
+         }
+      });
    }
    if (!fs.existsSync('output')) {
       fs.mkdirSync('output');
@@ -232,6 +236,7 @@ const langs = ['es', 'gl', 'en'];
                   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
                   <meta name="viewport" content="width=device-width" />
                   <title>${translations[lang].title}</title>
+                  <link rel="icon" href="../../favicon.svg" title="The favicon" />
                   <link rel="stylesheet" href="../../asserts/connectors.css" />
                   <meta name="robots" content="noindex" />
                   <link rel="icon" href="/favicon.svg" title="The favicon" />
@@ -248,6 +253,9 @@ const langs = ['es', 'gl', 'en'];
                   <script src="${lang === 'en' ? '../../' : `../../${lang}/`}connectors.js"></script> 
                   <script>
                      new Treant(config);
+                     var div = document.getElementById('OrganiseChart-big-commpany');
+                     var element = document.querySelector('.node.big-commpany.domain');
+                     div.scrollLeft = element.offsetLeft - div.clientWidth / 2 + element.clientWidth / 2;
                   </script>
                </body>
             </html>`,
