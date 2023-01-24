@@ -41,8 +41,12 @@ const options = {
    },
 };
 
-const langs = ['es', 'gl', 'en'];
-
+/**
+ * Anonymouse function to run the script
+ * @description This script will generate a report for each url in the sitemap.xml file publish in xabierlameiro.com/sitemap.xml
+ * @see https://github.com/GoogleChrome/lighthouse
+ * @see https://playwright.dev/docs/api/class-playwright
+ */
 (async () => {
    const browser = await chromium.launch();
    const page = await browser.newPage();
@@ -78,7 +82,7 @@ const langs = ['es', 'gl', 'en'];
       }
    });
 
-   for (const lang of langs) {
+   for (const lang of Object.keys(translations)) {
       let levels = {};
 
       for (const url of locales[lang]) {
@@ -209,7 +213,7 @@ const langs = ['es', 'gl', 'en'];
          `const config = ${JSON.stringify(config, null, 2)}`,
       );
       // Make links for the others languages
-      const links = langs
+      const links = Object.keys(translations)
          .filter((item) => item !== lang)
          .map(
             (item) =>
