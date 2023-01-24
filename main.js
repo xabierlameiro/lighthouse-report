@@ -70,34 +70,34 @@ const langs = ['es', 'gl', 'en'];
    await browser.close();
 
    // clean and create output folder
-   // if (fs.existsSync('output')) {
-   //    fs.rmdirSync('output', { recursive: true });
-   // }
-   // if (!fs.existsSync('output')) {
-   //    fs.mkdirSync('output');
-   // }
-   // Object.keys(locales).forEach((locale) => {
-   //    if (!fs.existsSync(`output/${locale}`)) {
-   //       fs.mkdirSync(`output/${locale}`);
-   //    }
-   // });
+   if (fs.existsSync('output')) {
+      fs.rmdirSync('output', { recursive: true });
+   }
+   if (!fs.existsSync('output')) {
+      fs.mkdirSync('output');
+   }
+   Object.keys(locales).forEach((locale) => {
+      if (!fs.existsSync(`output/${locale}`) && locale !== 'en') {
+         fs.mkdirSync(`output/${locale}`);
+      }
+   });
 
    for (const lang of langs) {
       let levels = {};
 
       for (const url of locales[lang]) {
          // Report
-         // const result = await launchChromeAndRunLighthouse(
-         //    url === 'https://xabierlameiro.com/home' ? 'https://xabierlameiro.com' : url,
-         //    options,
-         // );
+         const result = await launchChromeAndRunLighthouse(
+            url === 'https://xabierlameiro.com/home' ? 'https://xabierlameiro.com' : url,
+            options,
+         );
          let fileName = url.split('/').pop();
 
          if (fileName === 'es' || fileName === 'gl') {
             fileName = 'home';
          }
          // write report in output folder
-         // fs.writeFileSync(`output/${lang}/${fileName}.html`, result.report);
+         fs.writeFileSync(lang === 'en' ? `output/${fileName}.html` : `output/${lang}/${fileName}.html`, result.report);
 
          const cleanUrl = url.replace(/https:\/\/xabierlameiro.com\//, '');
          const urlWithoutLocale = cleanUrl.replace(/(gl|es)\//, '');
@@ -113,7 +113,7 @@ const langs = ['es', 'gl', 'en'];
 
                currentLevel[part].push({
                   url: url,
-                  route: `../${lang}/${fileName}.html`,
+                  route: lang === 'en' ? `../${fileName}.html` : `../${lang}/${fileName}.html`,
                   locale: lang,
                });
             } else {
@@ -217,7 +217,7 @@ const langs = ['es', 'gl', 'en'];
          .filter((item) => item !== lang)
          .map(
             (item) =>
-               `<li><a href="${lang === 'es' ? '/index.html' : `../${item}/index.html`}">${
+               `<li><a href="${item === 'en' ? '/index.html' : `../${item}/index.html`}">${
                   translations[item].lang
                }</a></li>`,
          );

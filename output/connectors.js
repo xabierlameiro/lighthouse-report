@@ -62,7 +62,7 @@ const config = {
                   "name": "solve-address-in-use-error"
                 },
                 "link": {
-                  "href": "../en/solve-address-in-use-error.html"
+                  "href": "../solve-address-in-use-error.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -73,7 +73,7 @@ const config = {
                   "name": "how-document-my-react-components-with-jsdoc"
                 },
                 "link": {
-                  "href": "../en/how-document-my-react-components-with-jsdoc.html"
+                  "href": "../how-document-my-react-components-with-jsdoc.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -84,7 +84,7 @@ const config = {
                   "name": "counter-for-github-stars-repository"
                 },
                 "link": {
-                  "href": "../en/counter-for-github-stars-repository.html"
+                  "href": "../counter-for-github-stars-repository.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -95,7 +95,7 @@ const config = {
                   "name": "make-a-views-counter-with-google-analytics"
                 },
                 "link": {
-                  "href": "../en/make-a-views-counter-with-google-analytics.html"
+                  "href": "../make-a-views-counter-with-google-analytics.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -106,7 +106,7 @@ const config = {
                   "name": "uncaught-error-minified-react-error"
                 },
                 "link": {
-                  "href": "../en/uncaught-error-minified-react-error.html"
+                  "href": "../uncaught-error-minified-react-error.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -134,7 +134,7 @@ const config = {
                   "name": "npm-token-solution-error"
                 },
                 "link": {
-                  "href": "../en/npm-token-solution-error.html"
+                  "href": "../npm-token-solution-error.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -162,7 +162,7 @@ const config = {
                   "name": "publish-report-testing-react"
                 },
                 "link": {
-                  "href": "../en/publish-report-testing-react.html"
+                  "href": "../publish-report-testing-react.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -190,7 +190,7 @@ const config = {
                   "name": "deploying-my-storybook-is-very-simple"
                 },
                 "link": {
-                  "href": "../en/deploying-my-storybook-is-very-simple.html"
+                  "href": "../deploying-my-storybook-is-very-simple.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -218,7 +218,7 @@ const config = {
                   "name": "translate-slugs-web-pages"
                 },
                 "link": {
-                  "href": "../en/translate-slugs-web-pages.html"
+                  "href": "../translate-slugs-web-pages.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -246,7 +246,7 @@ const config = {
                   "name": "solve-address-in-use-error"
                 },
                 "link": {
-                  "href": "../en/solve-address-in-use-error.html"
+                  "href": "../solve-address-in-use-error.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -257,7 +257,7 @@ const config = {
                   "name": "npm-token-solution-error"
                 },
                 "link": {
-                  "href": "../en/npm-token-solution-error.html"
+                  "href": "../npm-token-solution-error.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -268,7 +268,7 @@ const config = {
                   "name": "uncaught-error-minified-react-error"
                 },
                 "link": {
-                  "href": "../en/uncaught-error-minified-react-error.html"
+                  "href": "../uncaught-error-minified-react-error.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -296,7 +296,7 @@ const config = {
                   "name": "how-document-my-react-components-with-jsdoc"
                 },
                 "link": {
-                  "href": "../en/how-document-my-react-components-with-jsdoc.html"
+                  "href": "../how-document-my-react-components-with-jsdoc.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -307,7 +307,7 @@ const config = {
                   "name": "publish-report-testing-react"
                 },
                 "link": {
-                  "href": "../en/publish-report-testing-react.html"
+                  "href": "../publish-report-testing-react.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -318,7 +318,7 @@ const config = {
                   "name": "deploying-my-storybook-is-very-simple"
                 },
                 "link": {
-                  "href": "../en/deploying-my-storybook-is-very-simple.html"
+                  "href": "../deploying-my-storybook-is-very-simple.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -346,7 +346,7 @@ const config = {
                   "name": "counter-for-github-stars-repository"
                 },
                 "link": {
-                  "href": "../en/counter-for-github-stars-repository.html"
+                  "href": "../counter-for-github-stars-repository.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -357,7 +357,7 @@ const config = {
                   "name": "make-a-views-counter-with-google-analytics"
                 },
                 "link": {
-                  "href": "../en/make-a-views-counter-with-google-analytics.html"
+                  "href": "../make-a-views-counter-with-google-analytics.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -368,7 +368,7 @@ const config = {
                   "name": "translate-slugs-web-pages"
                 },
                 "link": {
-                  "href": "../en/translate-slugs-web-pages.html"
+                  "href": "../translate-slugs-web-pages.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
@@ -395,7 +395,7 @@ const config = {
               "name": "cookies-policy"
             },
             "link": {
-              "href": "../en/cookies-policy.html"
+              "href": "../cookies-policy.html"
             },
             "drawLineThrough": true,
             "collapsable": true,
@@ -413,7 +413,7 @@ const config = {
               "name": "legal-notice"
             },
             "link": {
-              "href": "../en/legal-notice.html"
+              "href": "../legal-notice.html"
             },
             "drawLineThrough": true,
             "collapsable": true,
@@ -431,7 +431,7 @@ const config = {
               "name": "privacy-policy"
             },
             "link": {
-              "href": "../en/privacy-policy.html"
+              "href": "../privacy-policy.html"
             },
             "drawLineThrough": true,
             "collapsable": true,
@@ -451,7 +451,7 @@ const config = {
           "name": "comments"
         },
         "link": {
-          "href": "../en/comments.html"
+          "href": "../comments.html"
         },
         "stackChildren": true,
         "connectors": {
@@ -466,7 +466,7 @@ const config = {
           "name": "home"
         },
         "link": {
-          "href": "../en/home.html"
+          "href": "../home.html"
         },
         "stackChildren": true,
         "connectors": {
@@ -481,7 +481,7 @@ const config = {
           "name": "settings"
         },
         "link": {
-          "href": "../en/settings.html"
+          "href": "../settings.html"
         },
         "stackChildren": true,
         "connectors": {
