@@ -70,38 +70,38 @@ const langs = ['es', 'gl', 'en'];
    await browser.close();
 
    // clean and create output folder
-   if (fs.existsSync('output')) {
-      fs.readdirSync('output').forEach((file) => {
-         if (file !== 'asserts') {
-            fs.rmdirSync(`output/${file}`, { recursive: true });
-         }
-      });
-   }
-   if (!fs.existsSync('output')) {
-      fs.mkdirSync('output');
-   }
-   Object.keys(locales).forEach((locale) => {
-      if (!fs.existsSync(`output/${locale}`) && locale !== 'en') {
-         fs.mkdirSync(`output/${locale}`);
-      }
-   });
+   // if (fs.existsSync('output')) {
+   //    fs.readdirSync('output').forEach((file) => {
+   //       if (file !== 'asserts') {
+   //          fs.rmdirSync(`output/${file}`, { recursive: true });
+   //       }
+   //    });
+   // }
+   // if (!fs.existsSync('output')) {
+   //    fs.mkdirSync('output');
+   // }
+   // Object.keys(locales).forEach((locale) => {
+   //    if (!fs.existsSync(`output/${locale}`) && locale !== 'en') {
+   //       fs.mkdirSync(`output/${locale}`);
+   //    }
+   // });
 
    for (const lang of langs) {
       let levels = {};
 
       for (const url of locales[lang]) {
          // Report
-         const result = await launchChromeAndRunLighthouse(
-            url === 'https://xabierlameiro.com/home' ? 'https://xabierlameiro.com' : url,
-            options,
-         );
+         // const result = await launchChromeAndRunLighthouse(
+         //    url === 'https://xabierlameiro.com/home' ? 'https://xabierlameiro.com' : url,
+         //    options,
+         // );
          let fileName = url.split('/').pop();
 
          if (fileName === 'es' || fileName === 'gl') {
             fileName = 'home';
          }
          // write report in output folder
-         fs.writeFileSync(lang === 'en' ? `output/${fileName}.html` : `output/${lang}/${fileName}.html`, result.report);
+         // fs.writeFileSync(lang === 'en' ? `output/${fileName}.html` : `output/${lang}/${fileName}.html`, result.report);
 
          const cleanUrl = url.replace(/https:\/\/xabierlameiro.com\//, '');
          const urlWithoutLocale = cleanUrl.replace(/(gl|es)\//, '');
@@ -239,7 +239,6 @@ const langs = ['es', 'gl', 'en'];
                   <link rel="icon" href="../../asserts/favicon.svg" title="The favicon" />
                   <link rel="stylesheet" href="../../asserts/connectors.css" />
                   <meta name="robots" content="noindex" />
-                  <link rel="icon" href="/favicon.svg" title="The favicon" />
                </head>
                <body class="container">
                   <h1>${translations[lang].title}</h1>
