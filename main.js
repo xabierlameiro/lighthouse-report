@@ -236,7 +236,7 @@ const langs = ['es', 'gl', 'en'];
                   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
                   <meta name="viewport" content="width=device-width" />
                   <title>${translations[lang].title}</title>
-                  <link rel="icon" href="../../favicon.svg" title="The favicon" />
+                  <link rel="icon" href="../../asserts/favicon.svg" title="The favicon" />
                   <link rel="stylesheet" href="../../asserts/connectors.css" />
                   <meta name="robots" content="noindex" />
                   <link rel="icon" href="/favicon.svg" title="The favicon" />
