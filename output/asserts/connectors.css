@@ -147,8 +147,3 @@ body {
 .notice {
    font-size: 14px;
 }
-
-body.container,
-#OrganiseChart-big-commpany {
-   width: 200vw;
-}
