@@ -70,6 +70,17 @@ const config = {
               },
               {
                 "text": {
+                  "name": "automatizacion-dos-informes-de-lighthouse"
+                },
+                "link": {
+                  "href": "../gl/automatizacion-dos-informes-de-lighthouse.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              },
+              {
+                "text": {
                   "name": "documentar-os-meus-compoñentes-de-react"
                 },
                 "link": {
@@ -269,6 +280,34 @@ const config = {
                 },
                 "link": {
                   "href": "../gl/erro-non-detectado-react-minificado.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              }
+            ]
+          },
+          {
+            "text": {
+              "name": "javascript"
+            },
+            "drawLineThrough": true,
+            "collapsable": true,
+            "stackChildren": true,
+            "connectors": {
+              "stackIndent": 30,
+              "style": {
+                "stroke": "#E3C61A",
+                "arrow-end": "block-wide-long"
+              }
+            },
+            "children": [
+              {
+                "text": {
+                  "name": "automatizacion-dos-informes-de-lighthouse"
+                },
+                "link": {
+                  "href": "../gl/automatizacion-dos-informes-de-lighthouse.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
