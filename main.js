@@ -46,6 +46,7 @@ const options = {
  * @description This script will generate a report for each url in the sitemap.xml file publish in xabierlameiro.com/sitemap.xml
  * @see https://github.com/GoogleChrome/lighthouse
  * @see https://playwright.dev/docs/api/class-playwright
+ * @see https://github.com/fperucic/treant-js
  */
 (async () => {
    const browser = await chromium.launch();
