@@ -208,15 +208,23 @@ const langs = ['es', 'gl', 'en'];
          }
       });
       // write connectors to make a tree
-      fs.writeFileSync(`output/${lang}/connectors.js`, `const config = ${JSON.stringify(config, null, 2)}`);
+      fs.writeFileSync(
+         lang === 'en' ? `output/connectors.js` : `output/${lang}/connectors.js`,
+         `const config = ${JSON.stringify(config, null, 2)}`,
+      );
       // Make links for the others languages
       const links = langs
          .filter((item) => item !== lang)
-         .map((item) => `<li><a href="../${item}/index.html">${translations[item].lang}</a></li>`);
+         .map(
+            (item) =>
+               `<li><a href="${lang === 'es' ? '/index.html' : `../${item}/index.html`}">${
+                  translations[item].lang
+               }</a></li>`,
+         );
 
       // write entry point
       fs.writeFileSync(
-         `output/${lang}/index.html`,
+         lang === 'en' ? `output/index.html` : `output/${lang}/index.html`,
          `<!DOCTYPE html>
             <html lang="${lang}">
                <head>
@@ -224,7 +232,7 @@ const langs = ['es', 'gl', 'en'];
                   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
                   <meta name="viewport" content="width=device-width" />
                   <title>${translations[lang].title}</title>
-                  <link rel="stylesheet" href="/connectors.css" />
+                  <link rel="stylesheet" href="../../asserts/connectors.css" />
                   <meta name="robots" content="noindex" />
                   <link rel="icon" href="/favicon.svg" title="The favicon" />
                </head>
@@ -235,12 +243,9 @@ const langs = ['es', 'gl', 'en'];
                   <ul class="links">${links.join('')}</ul>
                   <div class="chart" id="OrganiseChart-big-commpany"></div>
             
-                  <script src="public/raphael.js"></script>
-                  <script src="/Treant.js"></script>
-                  <script src="../../connectors.js"></script>
-               
-
-            
+                  <script src="../../asserts/raphael.js"></script>
+                  <script src="../../asserts/Treant.js"></script>
+                  <script src="${lang === 'en' ? '../../' : `../../${lang}/`}connectors.js"></script> 
                   <script>
                      new Treant(config);
                   </script>
