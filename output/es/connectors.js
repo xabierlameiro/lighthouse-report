@@ -127,6 +127,34 @@ const config = {
           },
           {
             "text": {
+              "name": "css"
+            },
+            "drawLineThrough": true,
+            "collapsable": true,
+            "stackChildren": true,
+            "connectors": {
+              "stackIndent": 30,
+              "style": {
+                "stroke": "#E3C61A",
+                "arrow-end": "block-wide-long"
+              }
+            },
+            "children": [
+              {
+                "text": {
+                  "name": "tema-oscuro"
+                },
+                "link": {
+                  "href": "../es/tema-oscuro.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              }
+            ]
+          },
+          {
+            "text": {
               "name": "npm"
             },
             "drawLineThrough": true,
@@ -317,6 +345,67 @@ const config = {
           },
           {
             "text": {
+              "name": "nextjs"
+            },
+            "drawLineThrough": true,
+            "collapsable": true,
+            "stackChildren": true,
+            "connectors": {
+              "stackIndent": 30,
+              "style": {
+                "stroke": "#E3C61A",
+                "arrow-end": "block-wide-long"
+              }
+            },
+            "children": [
+              {
+                "text": {
+                  "name": "tema-oscuro"
+                },
+                "link": {
+                  "href": "../es/tema-oscuro.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              },
+              {
+                "text": {
+                  "name": "contador-de-estrellas-de-github"
+                },
+                "link": {
+                  "href": "../es/contador-de-estrellas-de-github.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              },
+              {
+                "text": {
+                  "name": "hacer-un-contador-de-vistas-con-google-analytics"
+                },
+                "link": {
+                  "href": "../es/hacer-un-contador-de-vistas-con-google-analytics.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              },
+              {
+                "text": {
+                  "name": "como-traducir-las-urls"
+                },
+                "link": {
+                  "href": "../es/como-traducir-las-urls.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              }
+            ]
+          },
+          {
+            "text": {
               "name": "react"
             },
             "drawLineThrough": true,
@@ -358,56 +447,6 @@ const config = {
                 },
                 "link": {
                   "href": "../es/desplegar-storybook-facilmente.html"
-                },
-                "drawLineThrough": true,
-                "collapsable": true,
-                "stackChildren": true
-              }
-            ]
-          },
-          {
-            "text": {
-              "name": "nextjs"
-            },
-            "drawLineThrough": true,
-            "collapsable": true,
-            "stackChildren": true,
-            "connectors": {
-              "stackIndent": 30,
-              "style": {
-                "stroke": "#E3C61A",
-                "arrow-end": "block-wide-long"
-              }
-            },
-            "children": [
-              {
-                "text": {
-                  "name": "contador-de-estrellas-de-github"
-                },
-                "link": {
-                  "href": "../es/contador-de-estrellas-de-github.html"
-                },
-                "drawLineThrough": true,
-                "collapsable": true,
-                "stackChildren": true
-              },
-              {
-                "text": {
-                  "name": "hacer-un-contador-de-vistas-con-google-analytics"
-                },
-                "link": {
-                  "href": "../es/hacer-un-contador-de-vistas-con-google-analytics.html"
-                },
-                "drawLineThrough": true,
-                "collapsable": true,
-                "stackChildren": true
-              },
-              {
-                "text": {
-                  "name": "como-traducir-las-urls"
-                },
-                "link": {
-                  "href": "../es/como-traducir-las-urls.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,

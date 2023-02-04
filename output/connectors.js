@@ -127,6 +127,34 @@ const config = {
           },
           {
             "text": {
+              "name": "css"
+            },
+            "drawLineThrough": true,
+            "collapsable": true,
+            "stackChildren": true,
+            "connectors": {
+              "stackIndent": 30,
+              "style": {
+                "stroke": "#E3C61A",
+                "arrow-end": "block-wide-long"
+              }
+            },
+            "children": [
+              {
+                "text": {
+                  "name": "dark-theme"
+                },
+                "link": {
+                  "href": "../dark-theme.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              }
+            ]
+          },
+          {
+            "text": {
               "name": "npm"
             },
             "drawLineThrough": true,
@@ -317,6 +345,67 @@ const config = {
           },
           {
             "text": {
+              "name": "nextjs"
+            },
+            "drawLineThrough": true,
+            "collapsable": true,
+            "stackChildren": true,
+            "connectors": {
+              "stackIndent": 30,
+              "style": {
+                "stroke": "#E3C61A",
+                "arrow-end": "block-wide-long"
+              }
+            },
+            "children": [
+              {
+                "text": {
+                  "name": "dark-theme"
+                },
+                "link": {
+                  "href": "../dark-theme.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              },
+              {
+                "text": {
+                  "name": "counter-for-github-stars-repository"
+                },
+                "link": {
+                  "href": "../counter-for-github-stars-repository.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              },
+              {
+                "text": {
+                  "name": "make-a-views-counter-with-google-analytics"
+                },
+                "link": {
+                  "href": "../make-a-views-counter-with-google-analytics.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              },
+              {
+                "text": {
+                  "name": "translate-slugs-web-pages"
+                },
+                "link": {
+                  "href": "../translate-slugs-web-pages.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              }
+            ]
+          },
+          {
+            "text": {
               "name": "react"
             },
             "drawLineThrough": true,
@@ -364,124 +453,6 @@ const config = {
                 "stackChildren": true
               }
             ]
-          },
-          {
-            "text": {
-              "name": "nextjs"
-            },
-            "drawLineThrough": true,
-            "collapsable": true,
-            "stackChildren": true,
-            "connectors": {
-              "stackIndent": 30,
-              "style": {
-                "stroke": "#E3C61A",
-                "arrow-end": "block-wide-long"
-              }
-            },
-            "children": [
-              {
-                "text": {
-                  "name": "counter-for-github-stars-repository"
-                },
-                "link": {
-                  "href": "../counter-for-github-stars-repository.html"
-                },
-                "drawLineThrough": true,
-                "collapsable": true,
-                "stackChildren": true
-              },
-              {
-                "text": {
-                  "name": "make-a-views-counter-with-google-analytics"
-                },
-                "link": {
-                  "href": "../make-a-views-counter-with-google-analytics.html"
-                },
-                "drawLineThrough": true,
-                "collapsable": true,
-                "stackChildren": true
-              },
-              {
-                "text": {
-                  "name": "translate-slugs-web-pages"
-                },
-                "link": {
-                  "href": "../translate-slugs-web-pages.html"
-                },
-                "drawLineThrough": true,
-                "collapsable": true,
-                "stackChildren": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "text": {
-          "name": "legal"
-        },
-        "stackChildren": true,
-        "connectors": {
-          "style": {
-            "stroke": "#8080FF",
-            "arrow-end": "block-wide-long"
-          }
-        },
-        "children": [
-          {
-            "text": {
-              "name": "cookies-policy"
-            },
-            "link": {
-              "href": "../cookies-policy.html"
-            },
-            "drawLineThrough": true,
-            "collapsable": true,
-            "stackChildren": true,
-            "connectors": {
-              "stackIndent": 30,
-              "style": {
-                "stroke": "#E3C61A",
-                "arrow-end": "block-wide-long"
-              }
-            }
-          },
-          {
-            "text": {
-              "name": "legal-notice"
-            },
-            "link": {
-              "href": "../legal-notice.html"
-            },
-            "drawLineThrough": true,
-            "collapsable": true,
-            "stackChildren": true,
-            "connectors": {
-              "stackIndent": 30,
-              "style": {
-                "stroke": "#E3C61A",
-                "arrow-end": "block-wide-long"
-              }
-            }
-          },
-          {
-            "text": {
-              "name": "privacy-policy"
-            },
-            "link": {
-              "href": "../privacy-policy.html"
-            },
-            "drawLineThrough": true,
-            "collapsable": true,
-            "stackChildren": true,
-            "connectors": {
-              "stackIndent": 30,
-              "style": {
-                "stroke": "#E3C61A",
-                "arrow-end": "block-wide-long"
-              }
-            }
           }
         ]
       },
