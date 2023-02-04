@@ -1949,10 +1949,10 @@
       nodeEl = nodeEl || this.nodeDOM;
 
       // safe guard and check to see if it has a collapse switch
-      var nodeSwitchEl = UTIL.findEl('.node-name', true, nodeEl);
+      var nodeSwitchEl = UTIL.findEl('.collapse-switch', true, nodeEl);
       if (!nodeSwitchEl) {
          nodeSwitchEl = document.createElement('a');
-         nodeSwitchEl.className = 'node-name';
+         nodeSwitchEl.className = 'collapse-switch';
 
          nodeEl.appendChild(nodeSwitchEl);
          this.addSwitchEvent(nodeSwitchEl);
