@@ -41,6 +41,8 @@ const options = {
    },
 };
 
+const DOMAIN = 'https://xabierlameiro.com';
+
 /**
  * Anonymouse function to run the script
  * @description This script will generate a report for each url in the sitemap.xml file publish in xabierlameiro.com/sitemap.xml
@@ -51,11 +53,11 @@ const options = {
 (async () => {
    const browser = await chromium.launch();
    const page = await browser.newPage();
-   await page.goto('https://xabierlameiro.com/sitemap.xml');
+   await page.goto(`${DOMAIN}/sitemap.xml`);
    // get site map inside a body
    const sitemap = await page.$eval('body', (el) => el.innerHTML);
    // get all urls inside sitemap
-   const urls = sitemap.match(/<loc>(.*?)<\/loc>/g).map((url) => url.replace(/<\/?loc>/g, ''));
+   let urls = sitemap.match(/<loc>(.*?)<\/loc>/g).map((url) => url.replace(/<\/?loc>/g, ''));
    // split urls in locales bearing in mind that 'en' is the default locale and it's not included in the url
    let locales = urls.reduce((acc, url) => {
       let locale = url.split('/')[3];
@@ -69,10 +71,16 @@ const options = {
       return acc;
    }, {});
 
-   const index = locales.en.indexOf('https://xabierlameiro.com');
-   locales.en[index] = 'https://xabierlameiro.com/home';
+   const index = locales.en.indexOf(DOMAIN);
+   locales.en[index] = `${DOMAIN}/home`;
 
    await browser.close();
+
+   urls = urls.concat([
+      `${DOMAIN}/legal/cookies-policy`,
+      `${DOMAIN}/legal/legal-notice`,
+      `${DOMAIN}/legal/privacy-policy`,
+   ]);
 
    if (!fs.existsSync('output')) {
       fs.mkdirSync('output');
@@ -82,17 +90,14 @@ const options = {
          fs.mkdirSync(`output/${locale}`);
       }
    });
-
    for (const lang of Object.keys(translations)) {
       let levels = {};
 
       for (const url of locales[lang]) {
          // Report
-         const result = await launchChromeAndRunLighthouse(
-            url === 'https://xabierlameiro.com/home' ? 'https://xabierlameiro.com' : url,
-            options,
-         );
-         let fileName = url.split('/').pop();
+         const result = await launchChromeAndRunLighthouse(url === `${DOMAIN}/home` ? DOMAIN : url, options);
+
+         let fileName = url.replace(/https:\/\/xabierlameiro.com\//, '').replace(/\//g, '-');
 
          if (fileName === 'es' || fileName === 'gl') {
             fileName = 'home';
@@ -100,8 +105,7 @@ const options = {
          // write report in output folder
          fs.writeFileSync(lang === 'en' ? `output/${fileName}.html` : `output/${lang}/${fileName}.html`, result.report);
 
-         const cleanUrl = url.replace(/https:\/\/xabierlameiro.com\//, '');
-         const urlWithoutLocale = cleanUrl.replace(/(gl|es)\//, '');
+         const urlWithoutLocale = url.replace(/(gl|es)\//, '');
 
          const urlSplitted = urlWithoutLocale.split('/');
          let currentLevel = levels;
@@ -111,7 +115,6 @@ const options = {
                if (!currentLevel[part]) {
                   currentLevel[part] = [];
                }
-
                currentLevel[part].push({
                   url: url,
                   route: lang === 'en' ? `../${fileName}.html` : `../${lang}/${fileName}.html`,
@@ -243,10 +246,9 @@ const options = {
                   <p class="notice">${translations[lang].description}</p>
                   <ul class="links">${links.join('')}</ul>
                   <div class="chart" id="OrganiseChart-big-commpany"></div>
-            
                   <script src="../../asserts/raphael.js"></script>
                   <script src="../../asserts/Treant.js"></script>
-                  <script src="${lang === 'en' ? '../../' : `../../${lang}/`}connectors.js"></script> 
+                  <script src="${lang === 'en' ? '../../' : `../../${lang}/`}connectors.js"></script>
                   <script>
                      new Treant(config);
                      var div = document.getElementById('OrganiseChart-big-commpany');
@@ -281,7 +283,7 @@ const chart = {
 };
 
 const nodeStructure = {
-   text: { name: 'xabierlameiro.com' },
+   text: { name: DOMAIN },
    HTMLclass: 'domain',
    drawLineThrough: true,
    collapsable: true,
