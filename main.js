@@ -105,7 +105,8 @@ const DOMAIN = 'https://xabierlameiro.com';
          // write report in output folder
          fs.writeFileSync(lang === 'en' ? `output/${fileName}.html` : `output/${lang}/${fileName}.html`, result.report);
 
-         const urlWithoutLocale = url.replace(/(gl|es)\//, '');
+         const cleanUrl = url.replace(/https:\/\/xabierlameiro.com\//, '');
+         const urlWithoutLocale = cleanUrl.replace(/(gl|es)\//, '');
 
          const urlSplitted = urlWithoutLocale.split('/');
          let currentLevel = levels;
@@ -283,7 +284,7 @@ const chart = {
 };
 
 const nodeStructure = {
-   text: { name: DOMAIN },
+   text: { name: 'xabierlameiro.com' },
    HTMLclass: 'domain',
    drawLineThrough: true,
    collapsable: true,
