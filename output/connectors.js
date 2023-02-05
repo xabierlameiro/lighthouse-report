@@ -500,6 +500,74 @@ const config = {
             "arrow-end": "block-wide-long"
           }
         }
+      },
+      {
+        "text": {
+          "name": "legal"
+        },
+        "stackChildren": true,
+        "connectors": {
+          "style": {
+            "stroke": "#8080FF",
+            "arrow-end": "block-wide-long"
+          }
+        },
+        "children": [
+          {
+            "text": {
+              "name": "cookies-policy"
+            },
+            "link": {
+              "href": "../legal-cookies-policy.html"
+            },
+            "drawLineThrough": true,
+            "collapsable": true,
+            "stackChildren": true,
+            "connectors": {
+              "stackIndent": 30,
+              "style": {
+                "stroke": "#E3C61A",
+                "arrow-end": "block-wide-long"
+              }
+            }
+          },
+          {
+            "text": {
+              "name": "legal-notice"
+            },
+            "link": {
+              "href": "../legal-legal-notice.html"
+            },
+            "drawLineThrough": true,
+            "collapsable": true,
+            "stackChildren": true,
+            "connectors": {
+              "stackIndent": 30,
+              "style": {
+                "stroke": "#E3C61A",
+                "arrow-end": "block-wide-long"
+              }
+            }
+          },
+          {
+            "text": {
+              "name": "privacy-policy"
+            },
+            "link": {
+              "href": "../legal-privacy-policy.html"
+            },
+            "drawLineThrough": true,
+            "collapsable": true,
+            "stackChildren": true,
+            "connectors": {
+              "stackIndent": 30,
+              "style": {
+                "stroke": "#E3C61A",
+                "arrow-end": "block-wide-long"
+              }
+            }
+          }
+        ]
       }
     ]
   }

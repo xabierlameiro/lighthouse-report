@@ -76,11 +76,9 @@ const DOMAIN = 'https://xabierlameiro.com';
 
    await browser.close();
 
-   urls = urls.concat([
-      `${DOMAIN}/legal/cookies-policy`,
-      `${DOMAIN}/legal/legal-notice`,
-      `${DOMAIN}/legal/privacy-policy`,
-   ]);
+   locales.en.push(`${DOMAIN}/legal/cookies-policy`);
+   locales.en.push(`${DOMAIN}/legal/legal-notice`);
+   locales.en.push(`${DOMAIN}/legal/privacy-policy`);
 
    if (!fs.existsSync('output')) {
       fs.mkdirSync('output');
