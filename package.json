@@ -1,23 +1,25 @@
 {
-  "name": "lighthouse-report",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "lighthouse": "^9.6.8",
-    "playwright": "^1.29.2"
-  },
-  "devDependencies": {
-    "prettier": "^2.8.3"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all",
-    "printWidth": 120,
-    "tabWidth": 3
-  }
+   "name": "lighthouse-report",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "report": "node main.js"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "lighthouse": "^9.6.8",
+      "playwright": "^1.29.2"
+   },
+   "devDependencies": {
+      "prettier": "^2.8.3"
+   },
+   "prettier": {
+      "singleQuote": true,
+      "trailingComma": "all",
+      "printWidth": 120,
+      "tabWidth": 3
+   }
 }
