@@ -32,21 +32,6 @@ const config = {
     "children": [
       {
         "text": {
-          "name": "500"
-        },
-        "link": {
-          "href": "../es/es-500.html"
-        },
-        "stackChildren": true,
-        "connectors": {
-          "style": {
-            "stroke": "#8080FF",
-            "arrow-end": "block-wide-long"
-          }
-        }
-      },
-      {
-        "text": {
           "name": "blog"
         },
         "stackChildren": true,
