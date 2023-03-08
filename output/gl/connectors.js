@@ -92,6 +92,17 @@ const config = {
               },
               {
                 "text": {
+                  "name": "filtro-para-posicions"
+                },
+                "link": {
+                  "href": "../gl/gl-blog-node-filtro-para-posicions.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              },
+              {
+                "text": {
                   "name": "contador-de-estrelas-de-github"
                 },
                 "link": {
@@ -425,6 +436,17 @@ const config = {
                 },
                 "link": {
                   "href": "../gl/gl-blog-react-documentar-os-meus-compoñentes-de-react.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              },
+              {
+                "text": {
+                  "name": "filtro-para-posicions"
+                },
+                "link": {
+                  "href": "../gl/gl-blog-react-filtro-para-posicions.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,

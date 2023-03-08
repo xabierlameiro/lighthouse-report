@@ -92,6 +92,17 @@ const config = {
               },
               {
                 "text": {
+                  "name": "filter-for-positions"
+                },
+                "link": {
+                  "href": "../blog-node-filter-for-positions.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              },
+              {
+                "text": {
                   "name": "counter-for-github-stars-repository"
                 },
                 "link": {
@@ -425,6 +436,17 @@ const config = {
                 },
                 "link": {
                   "href": "../blog-react-how-document-my-react-components-with-jsdoc.html"
+                },
+                "drawLineThrough": true,
+                "collapsable": true,
+                "stackChildren": true
+              },
+              {
+                "text": {
+                  "name": "filter-for-positions"
+                },
+                "link": {
+                  "href": "../blog-react-filter-for-positions.html"
                 },
                 "drawLineThrough": true,
                 "collapsable": true,
